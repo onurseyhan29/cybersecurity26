@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    <title>Дигитална самозащита: Защита на вашите файлове и акаунти</title>
+    <link rel="stylesheet" href="../files/opening.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#0a0f1d',
+                            card: '#111827',
+                            border: '#1f2937',
+                            accent: '#10b981', // Emerald green
+                            blue: '#3b82f6',   // Neon blue
+                            danger: '#ef4444'  // Alert red
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['Fira Code', 'Courier New', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0f1d;
+            color: #f3f4f6;
+            user-select: none;
+        }
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateY(10px);
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glow-accent {
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.15);
+        }
+        .glow-blue {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col justify-between overflow-hidden font-sans text-slate-100 bg-cyber-bg">
+
+    <header style="background-color: #00000000;" class="w-full px-6 py-4 flex justify-between items-center border-b border-cyber-border/60 bg-cyber-bg/80 backdrop-blur z-20">
+        <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-full bg-cyber-accent animate-pulse"></span>
+            <span class="font-mono text-sm tracking-wider text-slate-400 uppercase"><a href="../">← Назад</a></span>
+        </div>
+        <div class="flex items-center gap-4">
+            <button onclick="toggleFullscreen()" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-cyber-card transition-colors" title="Toggle Fullscreen">
+                <svg id="fullscreen-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-1 relative flex items-center justify-center p-6 md:p-12 overflow-y-auto">
+        <div class="w-full max-w-5xl mx-auto h-full flex flex-col justify-center">
+
+            <!-- SLIDE 1: Title Slide -->
+            <section class="slide active flex-col items-center text-center gap-6" id="slide-1">
+                
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                    Дигитална самозащита:<br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-teal-400 to-cyber-accent">
+                        Пази дигиталния си живот
+                    </span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 max-w-2xl font-light">
+                    Практическо ръководство за защита на вашите файлове и акаунти от зловреден софтуер и хакерски атаки.
+                </p>
+                <div class="pt-8 flex flex-wrap gap-4 justify-center">
+                    <button onclick="nextSlide()" class="px-8 py-3.5 rounded-xl bg-cyber-accent text-slate-950 font-bold hover:bg-emerald-400 transition-all shadow-lg glow-accent flex items-center gap-2">
+                        Започни презентацията
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </button>
+                </div>
+                <div class="text-xs text-slate-500 font-mono mt-6">
+                    Използвай <span class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">← / →</span> или <span class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">Spacebar</span> за навигация
+                </div>
+            </section>
+
+            <!-- SLIDE 2: Malicious Files Tricks -->
+            <section class="slide flex-col gap-6" id="slide-2">
+                <div>
+                    <span class="text-cyber-danger font-mono text-sm tracking-wider uppercase">Заплаха 1: Зловредни файлове</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-1">Коварните трикове, използвани от зловредния софтуер</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+                    <!-- Card 1 -->
+                    <div class="bg-cyber-card border border-cyber-border rounded-2xl p-6 hover:border-cyber-danger/50 transition-all hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-cyber-danger/10 border border-cyber-danger/30 flex items-center justify-center text-2xl mb-4">🎭</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Двойни разширения</h3>
+                        <p class="text-sm text-slate-400 mb-4">Файлове с имена като doc.pdf.exe, които изглеждат като документи, но всъщност изпълняват опасен код.</p>
+                        <div class="bg-slate-900 p-3 rounded-lg border border-slate-800 font-mono text-xs text-slate-300">
+                            homework<span class="text-emerald-400">.pdf</span><span class="text-cyber-danger font-bold">.exe</span>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-cyber-card border border-cyber-border rounded-2xl p-6 hover:border-cyber-danger/50 transition-all hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-cyber-danger/10 border border-cyber-danger/30 flex items-center justify-center text-2xl mb-4">🪤</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Фалшиви бутони за изтегляне</h3>
+                        <p class="text-sm text-slate-400 mb-4">Заблуждаващи реклами в сайтове за стрийминг или за модификации на игри, които инициират нежелани изтегляния.</p>
+                        <div class="bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-center py-2 rounded-lg font-bold text-xs">
+                            [DOWNLOAD NOW (AD)]
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-cyber-card border border-cyber-border rounded-2xl p-6 hover:border-cyber-danger/50 transition-all hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-cyber-danger/10 border border-cyber-danger/30 flex items-center justify-center text-2xl mb-4">📦</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Архив на „Троян“</h3>
+                        <p class="text-sm text-slate-400 mb-4">Защитени с парола ZIP/RAR файлове, съдържащи скрити инсталационни скриптове.</p>
+                        <div class="bg-slate-900 p-3 rounded-lg border border-slate-800 font-mono text-xs text-slate-300">
+                            free_game_cheat<span class="text-amber-400">.zip</span> → setup.bat
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: Malicious Files Rules of Defense -->
+            <section class="slide flex-col gap-6" id="slide-3">
+                <div>
+                    <span class="text-cyber-accent font-mono text-sm tracking-wider uppercase">Стратегия за отбрана 1</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-1">3 правила за сигурни файлове</h2>
+                </div>
+                <div class="space-y-4 mt-2">
+                    <div class="bg-cyber-card border border-cyber-border rounded-xl p-5 flex items-start gap-4 hover:border-cyber-accent/40 transition-colors">
+                        <span class="w-8 h-8 rounded-lg bg-cyber-accent/10 border border-cyber-accent/30 text-cyber-accent flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">1</span>
+                        <div>
+                            <h3 class="font-bold text-white text-lg">Проверявай разширението</h3>
+                            <p class="text-slate-400 text-sm mt-1">Активирайте показването на разширенията на файловете в Windows File Explorer или Mac Finder. Внимавайте за изпълними формати като <span class="px-1.5 py-0.5 rounded bg-cyber-danger/20 text-cyber-danger font-mono text-xs font-bold border border-cyber-danger/30">.exe</span> <span class="px-1.5 py-0.5 rounded bg-cyber-danger/20 text-cyber-danger font-mono text-xs font-bold border border-cyber-danger/30">.bat</span> <span class="px-1.5 py-0.5 rounded bg-cyber-danger/20 text-cyber-danger font-mono text-xs font-bold border border-cyber-danger/30">.scr</span> <span class="px-1.5 py-0.5 rounded bg-cyber-danger/20 text-cyber-danger font-mono text-xs font-bold border border-cyber-danger/30">.vbs</span>.</p>
+                        </div>
+                    </div>
+                    <div class="bg-cyber-card border border-cyber-border rounded-xl p-5 flex items-start gap-4 hover:border-cyber-accent/40 transition-colors">
+                        <span class="w-8 h-8 rounded-lg bg-cyber-accent/10 border border-cyber-accent/30 text-cyber-accent flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">2</span>
+                        <div>
+                            <h3 class="font-bold text-white text-lg">Използвайте VirusTotal, преди да отворите изтеглени файлове.</h3>
+                            <p class="text-slate-400 text-sm mt-1">Качете подозрителни файлове в <a href="https://www.virustotal.com" target="_blank" class="text-cyber-blue underline">VirusTotal.com</a>. Сканира файловете незабавно, като използва над 70 антивирусни двигателя.</p>
+                        </div>
+                    </div>
+                    <div class="bg-cyber-card border border-cyber-border rounded-xl p-5 flex items-start gap-4 hover:border-cyber-accent/40 transition-colors">
+                        <span class="w-8 h-8 rounded-lg bg-cyber-accent/10 border border-cyber-accent/30 text-cyber-accent flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">3</span>
+                        <div>
+                            <h3 class="font-bold text-white text-lg">Поддържайте операционната си система и браузъра си актуални.</h3>
+                            <p class="text-slate-400 text-sm mt-1">Софтуерните актуализации отстраняват „уязвимости от типа „нулев ден““ (пропуски в сигурността), които нападателите използват, за да изпълняват код автоматично.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: Account Attacks -->
+            <section class="slide flex-col gap-6" id="slide-4">
+                <div>
+                    <span class="text-cyber-blue font-mono text-sm tracking-wider uppercase">Заплаха 2: Атаки срещу акаунти</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-1">Как се крадат акаунти</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                    <div class="bg-cyber-card border border-cyber-border rounded-2xl p-6 hover:border-cyber-blue/50 transition-all">
+                        <div class="text-3xl mb-3">🎣</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Фишинг и фалшиви екрани за вход</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Фалшиви страници, създадени така, че да изглеждат точно като страниците за вход в FaceBook, Instagram или др. След като въведете паролата си, нападателят я получава незабавно.
+                        </p>
+                    </div>
+                    <div class="bg-cyber-card border border-cyber-border rounded-2xl p-6 hover:border-cyber-blue/50 transition-all">
+                        <div class="text-3xl mb-3">🗝️</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Запълване на идентификационни данни (повторна употреба на парола)</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Ако бъде компрометиран слабо известен уебсайт, хакерите вземат изтеклите ви имейл и парола и автоматично ги изпробват в големи платформи като Google.
+                        </p>
+                    </div>
+                    <div class="bg-cyber-card border border-cyber-border rounded-2xl p-6 hover:border-cyber-blue/50 transition-all md:col-span-2">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-2xl">🚨</span>
+                            <h3 class="text-xl font-bold text-white">Социално инженерство и спешни лични съобщения</h3>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Съобщения като <span class="text-amber-300 italic">„По погрешка докладвах акаунта ти – говори с този модератор веднага!“</span> или <span class="text-amber-300 italic">Спечелихте карта за подарък на стойност 50 euro – кликнете тук!"</span> създават изкуствена паника или вълнение.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: Account Defense Rules -->
+            <section class="slide flex-col gap-6" id="slide-5">
+                <div>
+                    <span class="text-cyber-accent font-mono text-sm tracking-wider uppercase">Стратегия за отбрана 2</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-1">Правила за защита на акаунта</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-2">
+                    <div class="bg-cyber-card border border-cyber-border rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-cyber-accent/10 border border-cyber-accent/30 text-cyber-accent font-mono font-bold flex items-center justify-center mb-4">2FA</div>
+                            <h3 class="font-bold text-white text-lg mb-2">Включване на двуфакторна автентификация (2FA)</h3>
+                            <p class="text-slate-400 text-sm">Използвайте двуфакторно удостоверяване чрез приложения за удостоверяване (Google/Bitwarden) вместо SMS, когато е възможно.</p>
+                        </div>
+                        <span class="mt-4 text-xs font-mono text-cyber-accent">Защита срещу откраднати пароли</span>
+                    </div>
+                    <div class="bg-cyber-card border border-cyber-border rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue font-mono font-bold flex items-center justify-center mb-4">🔑</div>
+                            <h3 class="font-bold text-white text-lg mb-2">Мениджъри на пароли</h3>
+                            <p class="text-slate-400 text-sm">Използвайте инструменти като Bitwarden или 1Password. Създавайте дълги и уникални пароли за всеки отделен сайт.</p>
+                        </div>
+                        <span class="mt-4 text-xs font-mono text-cyber-blue">Предотвратява атаки тип „credential stuffing“</span>
+                    </div>
+                    <div class="bg-cyber-card border border-cyber-border rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/30 text-purple-400 font-mono font-bold flex items-center justify-center mb-4">🔍</div>
+                            <h3 class="font-bold text-white text-lg mb-2">Проверете адресните ленти</h3>
+                            <p class="text-slate-400 text-sm">Винаги проверявайте името на домейна в адресната лента на браузъра, преди да въведете данните си за вход.</p>
+                        </div>
+                        <span class="mt-4 text-xs font-mono text-purple-400">Блокира фишинг капани</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: Interactive Quiz -->
+            <section class="slide flex-col gap-6" id="slide-6">
+                <div>
+                    <span class="text-amber-400 font-mono text-sm tracking-wider uppercase">Интерактивно предизвикателство</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-1">Открийте безопасната връзка! 🕵️</h2>
+                    <p class="text-slate-400 text-sm mt-1">Кликнете върху URL адреса, който е БЕЗОПАСЕН за влизане:</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4 mt-2">
+                    <!-- Option A (Fake) -->
+                    <button onclick="checkQuiz(this, false, 'faecbook-verify.com е фишинг домейн! Обърнете внимание на разменените букви.')" class="p-4 rounded-xl bg-cyber-card border border-cyber-border hover:border-slate-500 text-left transition-all flex items-center justify-between group">
+                        <span class="font-mono text-slate-300 group-hover:text-white">https://faecbook-verify.com</span>
+                        <span class="text-xs font-mono px-2 py-1 rounded bg-slate-800 text-slate-400">A</span>
+                    </button>
+                    <!-- Option B (Real) -->
+                    <button onclick="checkQuiz(this, true, 'Правилно! facebook.com е официалният домейн.')" class="p-4 rounded-xl bg-cyber-card border border-cyber-border hover:border-slate-500 text-left transition-all flex items-center justify-between group">
+                        <span class="font-mono text-slate-300 group-hover:text-white">https://facebook.com/login</span>
+                        <span class="text-xs font-mono px-2 py-1 rounded bg-slate-800 text-slate-400">B</span>
+                    </button>
+                    <!-- Option C (Fake) -->
+                    <button onclick="checkQuiz(this, false, 'facebook-security-verify.net е измамна връзка, която се опитва да те подведе!')" class="p-4 rounded-xl bg-cyber-card border border-cyber-border hover:border-slate-500 text-left transition-all flex items-center justify-between group">
+                        <span class="font-mono text-slate-300 group-hover:text-white">https://facebook-security-verify.net</span>
+                        <span class="text-xs font-mono px-2 py-1 rounded bg-slate-800 text-slate-400">C</span>
+                    </button>
+                </div>
+
+                <!-- Quiz Feedback Message Box -->
+                <div id="quiz-feedback" class="hidden p-4 rounded-xl font-mono text-sm text-center"></div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <footer class="w-full px-6 py-4 border-t border-cyber-border/60 bg-cyber-bg/80 backdrop-blur z-20 flex flex-col gap-3">
+        <!-- Progress Bar -->
+        <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+            <div id="progress-bar" class="bg-gradient-to-r from-cyber-blue to-cyber-accent h-full w-1/6 transition-all duration-300"></div>
+        </div>
+
+        <div class="flex justify-between items-center">
+            <span id="slide-indicator" class="font-mono text-xs text-slate-400">Slide 1 of 6</span>
+
+            <div class="flex items-center gap-3">
+                <button onclick="prevSlide()" id="prev-btn" class="px-4 py-2 rounded-lg bg-cyber-card border border-cyber-border text-slate-300 hover:text-white hover:border-slate-600 disabled:opacity-40 disabled:cursor-not-allowed text-sm font-medium transition-colors">
+                    ← Предишен
+                </button>
+                <button onclick="nextSlide()" id="next-btn" class="px-4 py-2 rounded-lg bg-cyber-blue text-slate-950 font-bold hover:bg-blue-400 text-sm transition-colors shadow-lg">
+                    Следващ →
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 6;
+
+        function updateSlide() {
+            // Hide all slides
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            // Show active slide
+            const activeSlide = document.getElementById(`slide-${currentSlide}`);
+            if (activeSlide) {
+                activeSlide.classList.add('active');
+            }
+
+            // Update progress bar
+            const progressPercentage = (currentSlide / totalSlides) * 100;
+            document.getElementById('progress-bar').style.width = `${progressPercentage}%`;
+
+            // Update indicator text
+            document.getElementById('slide-indicator').textContent = `Slide ${currentSlide} of ${totalSlides}`;
+
+            // Button state controls
+            document.getElementById('prev-btn').disabled = currentSlide === 1;
+            const nextBtn = document.getElementById('next-btn');
+            if (currentSlide === totalSlides) {
+                nextBtn.textContent = 'Завърши';
+            } else {
+                nextBtn.textContent = 'Следващ →';
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlide();
+            } else if (currentSlide === totalSlides) {
+                window.location.href = '../info'; 
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            }
+        });
+
+        function checkQuiz(button, isCorrect, message) {
+            const feedbackBox = document.getElementById('quiz-feedback');
+            feedbackBox.classList.remove('hidden', 'bg-emerald-500/10', 'border-emerald-500/40', 'text-emerald-400', 'bg-cyber-danger/10', 'border-cyber-danger/40', 'text-cyber-danger');
+            
+            if (isCorrect) {
+                feedbackBox.classList.add('bg-emerald-500/10', 'border', 'border-emerald-500/40', 'text-emerald-400');
+                feedbackBox.innerHTML = `✅ ${message}`;
+            } else {
+                feedbackBox.classList.add('bg-cyber-danger/10', 'border', 'border-cyber-danger/40', 'text-cyber-danger');
+                feedbackBox.innerHTML = `❌ ${message}`;
+            }
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log(`Error attempting to enable fullscreen: ${err.message}`);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        // Initialize presentation view
+        updateSlide();
+    </script>
+</body>
+</html>

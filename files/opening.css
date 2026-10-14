@@ -1,0 +1,9 @@
+body{
+    animation-name: opening;
+    animation-duration: 2s;
+}
+@keyframes opening{
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}

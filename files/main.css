@@ -1,0 +1,184 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+    background-color: #0c0d1c;
+    margin: 0;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #212953;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #37448a;
+}
+header{
+    background-color: #ffffff;
+    width: 100%;
+    height: 55vw;
+    position: relative;
+    margin: 0;
+}
+.wave{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+.title{
+  position: absolute;
+  top: 13%;
+  width: 45%;
+  margin: auto;
+  left: 10%;
+  font-size: 1.8vw;
+  z-index: 2;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  animation: left 6s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards;
+  color: #2f2958;
+}
+header>video{
+  position: absolute;
+  right: 3%;
+  top: 7%;
+  width: 45%;
+}
+@keyframes left{
+  from{opacity: 0;transform: translateX(-70px)}
+  to{opacity: 1;transform: translateX(0)}
+}
+.wavetop{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.downbut{
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background-color: #312757;
+  transform: translateX(-50%) scale(0.65);
+  left: 50%;
+  z-index: 4;
+  bottom: 22%;
+  padding: 1vw;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  height: 5vw;
+}
+.downbut>img{
+  width: 5vw;
+  aspect-ratio: 1 / 1;
+  margin: auto;
+}
+.downbut:hover{
+  background-color: #13162d;
+}
+#content{
+  width: 70%;
+  text-align: left;
+  color: rgb(253, 253, 253);
+  font-family: "PT Sans", sans-serif;
+  font-weight: 100;
+  font-size: 0.71vw;
+  position: relative;  
+  padding-top: 2vw;
+}
+#content>h1{
+  width: 68%;
+}
+.hackedgif{
+  position: absolute;
+  right: -15%;
+  top: 1%;
+  z-index: 3;
+  height: 30vw;
+}
+.openpres{
+  background-color: #51525c;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1.0vw;
+  font-size: 1.1vw;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  border-radius: 10vw;
+  z-index: 4;
+}
+.openpres>span>img{
+  width: 1.5vw;
+  padding-right: 0.6vw;
+  margin-bottom: -0.48%;
+}
+.openpres:hover{
+  background-color: #305894;
+}
+@media only screen and (max-width: 500px) {
+  header{
+    height: 105vw;
+  }
+  .title{
+    top: 22%;
+    width: 80%;
+    margin: auto;
+    left: 10%;
+    font-size: 3.5vw;
+  }
+  header>video{
+    position: absolute;
+    right: 3%;
+    top: 7%;
+    width: 0%;
+    height: 0%;
+  }
+  .downbut>img{
+    width: 20vw;
+  }
+  .downbut{
+    bottom: 7%;
+    height: auto;
+  }
+  #content{
+  width: 80%;
+  text-align: left;
+  font-size: 2.7vw;
+  position: relative;  
+  padding-top: 2vw;
+  }
+  #content>h1{
+    width: 100%;
+  }
+  .hackedgif{
+    right: 0;
+    top: 0;
+    height: 0;
+    width: 0;
+  }
+  .openpres{
+    padding: 4vw;
+    font-size: 6vw;
+    font-weight: 700;
+    width: auto;
+    border-radius: 10vw;
+    z-index: 4;
+  }
+  .openpres>span>img{
+    width: 7vw;
+    padding-right: 2vw;
+    margin-bottom: -1.7%;
+  }
+}
+@media only screen and (max-width: 1100px) and (orientation: landscape) {
+
+}

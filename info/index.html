@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../files/info.css">
+    <link rel="stylesheet" href="../files/navigation.css">
+    <link rel="stylesheet" href="../files/opening.css">
+    <link rel="stylesheet" href="../files/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Дигитална самозащита | Седмица на програмирането</title>
+    <script>
+        function copyLink() {
+            const linkToCopy = "https://www.youtube.com";
+
+            navigator.clipboard.writeText(linkToCopy).then(() => {
+            document.getElementById("copyImg").style.opacity = "0.4";
+         });
+        }
+    </script>
+</head>
+<body>
+    <nav class="buttons">
+       <button class="logo" popovertarget="sharescreen"><div class="logos"></div></button><div class="share-hint"><h1>⬅️ Сподели оттук!</h1></div>
+            <div id="sharescreen" popover>
+                <br><br><center><a href="../"><span><img style="padding-right: 10px;margin-bottom: -8px;height: 27px;padding-left: 2px;" src="../files/openlink.svg" alt=""></span>Към началната страница</a></center><br><br>
+                <h2>Сканирай QR кода с телефона си или копирай директния линк:</h2><br>
+                <div>
+                    <img src="../files/qr.png" alt="QR code"><br>
+                    <button id="copyBtn" onclick="copyLink()"><img src="../files/copy.svg" id="copyImg" alt="Copy Link" title="Copy Link"></button>
+                </div>
+            </div>
+       <a href="../" alt="Начална Страница" title="Начална Страница"><img style="margin-top: -7px;" src="../files/home.svg"></a>
+       <a href="../presentation/" alt="Презентация" title="Презентация"><img src="../files/slideshow.svg"></a>
+       <a href="" alt="Повече Информация" title="Повече Информация"><img src="../files/info-f.svg"></a>
+    </nav>
+    <!--"Space"-->
+
+    <header>
+        <img src="../files/wavetop.svg" alt="wave svg" class="wavetop">
+        <div class="title">
+            <h1>Повече за киберсигурността и полезни инструменти</h1>
+            <h2>Инструменти и ресурси извън презентацията, които да ти помогнат да останеш защитен онлайн.</h2>
+        </div>
+        <video autoplay muted loop id="vid">
+            <source src="../files/Cyber Security.mp4" type="video/mp4">
+        </video>
+    </header>
+    <div style="position: relative;"><img class="wave" src="../files/wave2.svg" alt="wave svg"></div>
+
+    <center><div class="content">
+        <h1>След като завършихте презентацията и успешно преминахте през теста за фишинг домейни, е време да се запознаете с професионални и безплатни инструменти, използвани от експертите по сигурност:</h1>
+    </div></center>
+
+    <center><div class="links1">
+        <div>
+            <a target="_blank" href="https://www.virustotal.com/"><span><img class="imginlink" src="../files/openlink.svg" alt=""></span><span><h2>VirusTotal</h2></span></a>
+            <p>Платформа за сканиране на подозрителни файлове и уеб линкове чрез десетки антивирусни двигатели едновременно.</p>
+        </div>
+        <div>
+            <a target="_blank" href="https://urlscan.io/"><span><img class="imginlink" src="../files/openlink.svg" alt=""></span><span><h2>urlscan.io</h2></span></a>
+            <p>Инструмент за безопасно преглеждане на уебсайтове и анализ на тяхното съдържание и скрити скриптове, без да излагате устройството си на риск.</p>
+        </div>
+        <div>
+            <a target="_blank" href="https://haveibeenpwned.com/"><span><img class="imginlink" src="../files/openlink.svg" alt=""></span><span><h2>Have I Been Pwned?</h2></span></a>
+            <p>Услуга, чрез която можете да проверите дали вашият имейл или парола са били компрометирани при масови пробиви на данни в интернет.</p>
+        </div>
+    </div></center>
+
+    <center><div class="content2">
+        <h1>Ето топ 3 на най-информативните и полезни сайтове от списъка за ученици и хора, които искат да научат повече за киберсигурността:</h1>
+    </div></center>
+
+    <center><div class="links2">
+        <div>
+            <a target="_blank" href="https://www.cisa.gov/"><span><img class="imginlink2" src="../files/openlink.svg" alt=""></span><span><h2>CISA</h2></span></a>
+            <p>Това е официалната държавна агенция за киберсигурност. Тя е номер едно за надеждни съвети, официални ръководства за защита и актуални предупреждения, които са поднесени изключително професионално и без фалшиви новини.</p>
+        </div>
+        <div>
+            <a target="_blank" href="https://thehackernews.com/"><span><img class="imginlink2" src="../files/openlink.svg" alt=""></span><span><h2>The Hacker News</h2></span></a>
+            <p>Най-доброто място за ежедневни новини. Ако искаш да разбереш какви нови заплахи върлуват в интернет, как хакерите атакуват големи компании и какви нови уязвимости са открити, това е най-четеният и авторитетен източник.</p>
+        </div>
+        <div>
+            <a target="_blank" href="https://tryhackme.com/"><span><img class="imginlink2" src="../files/openlink.svg" alt=""></span><span><h2>TryHackMe</h2></span></a>
+            <p>За разлика от сайтовете само с текст, този е на челно място, защото предлага практика. Чрез забавни и интерактивни задачи учениците и начинаещите могат реално да видят как се случват атаките и как да се защитят от тях.</p>
+        </div>
+    </div></center>
+
+    <center><div class="content3">
+        <h1>Време е да се разделим със старите дигитални навици и да прегърнем сигурността.</h1>
+        <p>Всеки клик, всяка парола и всеки прегледан линк са крачка към по-безопасно онлайн пространство. Продължавай да проверяваш, да се учиш и да защитаваш личния си свят – защото в дигиталната ера бдителността е най-силната ти защита. Благодарим за вашето внимание!</p>
+    </div></center>
+    
+    <center><img class="end" src="../files/safe.png" alt=""></center>
+
+    <footer>
+        <img src="../files/wavefoot.svg" alt="">
+        <div class="footertool1">
+            <h1 style="font-weight: 800;">Създадено от Онур С. XIIᵃ | СУ „Васил Левски“, гр. Главиница</h1>
+            <h1 style="font-weight: 100;">Полезни безплатни инструменти:</h1>
+            <p>
+                <span><a target="_blank" style="color: #0c0d1c;" href="https://www.virustotal.com/">VirusTotal</a></span>
+                <span><a target="_blank" style="color: #0c0d1c;" href="https://urlscan.io/">urlscan.io</a></span>
+                <span><a target="_blank" style="color: #0c0d1c;" href="https://haveibeenpwned.com/">Have I Been Pwned?</a></span>
+                <span><a target="_blank" style="color: #0c0d1c;" href="https://wheregoes.com/">ExpandURL</a></span>
+            </p>
+            <h1 style="font-style: italic;">„Бъдете сигурни онлайн!“</h1>
+            <h1 style="font-weight: 800;">© 2026 Седмица на програмирането | Киберсигурност - дигитална самозащита</h1>
+        </div>
+    </footer>
+</body>
+</html>
